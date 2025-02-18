@@ -1,0 +1,14 @@
+@use "./Variables";
+
+.pageErreur {
+  text-align: Variables.$text-align;
+  .titresErreur {
+    font-size: 288px;
+    color: Variables.$color-red;
+  }
+
+  .errorMessage {
+    color: Variables.$color-red;
+    margin: 70px;
+  }
+}

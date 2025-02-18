@@ -1,0 +1,13 @@
+@use "./Variables";
+
+.footer {
+  background-color: black;
+  color: Variables.$color-white;
+  display: Variables.$display-flex;
+  justify-content: Variables.$justify-content;
+  align-items: Variables.$align-item;
+  text-align: Variables.$text-align;
+  padding: 40px;
+  width: 100%;
+  margin-top: auto;
+}

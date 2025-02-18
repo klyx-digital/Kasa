@@ -1,0 +1,42 @@
+@use "./_Mixins";
+@use "./Variables";
+
+.homeBanniere {
+  position: relative;
+  margin: 25px 0px;
+  height: 25vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    @include Mixins.Banniere;
+    filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  .titreBanniere {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: Variables.$color-white;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 20vh;
+  }
+}
+
+.aboutBanniere {
+  img {
+    @include Mixins.Banniere;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 700px) {
+    height: 20vh;
+  }
+}

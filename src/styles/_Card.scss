@@ -1,0 +1,48 @@
+@use "./Variables";
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: Variables.$justify-content;
+  align-items: Variables.$align-item;
+  background-color: Variables.$background-gris;
+  border-radius: Variables.$border-radius;
+  padding: 25px;
+  gap: 25px;
+  margin: 25px 0px;
+
+  figure {
+    position: relative;
+
+    .cardImage {
+      border-radius: Variables.$border-radius;
+      object-fit: cover;
+      width: 100%;
+      height: 360px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width: 700px) {
+        height: 300px;
+      }
+    }
+
+    .cardTitle {
+      position: absolute;
+      z-index: 1;
+      left: 10px;
+      bottom: 10px;
+      width: 50%;
+      color: Variables.$color-white;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+@use "./Variables";
+
+.header {
+  display: Variables.$display-flex;
+  justify-content: space-between;
+  align-items: Variables.$align-item;
+  margin: 30px 0px;
+
+  .navigation {
+    display: Variables.$display-flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    margin: 10px 10px;
+    img {
+      width: 30%;
+    }
+  }
+}
