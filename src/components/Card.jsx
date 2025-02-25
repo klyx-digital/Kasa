@@ -6,18 +6,20 @@ function Card(props) {
   return (
     <div className="card">
       {Appartements.map((Appartement) => (
-        <Link to={`/logement/${Appartement.id}`}>
-          <figure key={Appartement.id} id={Appartement.id}>
-            <img
-              src={Appartement.cover}
-              alt={Appartement.title}
-              className="cardImage"
-            />
-            <figcaption className="cardTitle">
-              <h2>{Appartement.title}</h2>
-            </figcaption>
-          </figure>
-        </Link>
+        <li key={Appartement.id}>
+          <Link to={`/logement/${Appartement.id}`}>
+            <figure id={Appartement.id}>
+              <img
+                src={Appartement.cover}
+                alt={Appartement.title}
+                className="cardImage"
+              />
+              <figcaption className="cardTitle">
+                <h2>{Appartement.title}</h2>
+              </figcaption>
+            </figure>
+          </Link>
+        </li>
       ))}
     </div>
   );

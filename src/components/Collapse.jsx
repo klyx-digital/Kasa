@@ -17,7 +17,7 @@ function Collapse({ titre, texte }) {
         <img src={Ouverture ? Up : Down} alt="Icone" onClick={basculer} />
       </div>
       <div className={`texteCollapse ${Ouverture ? "ouvert" : ""}`}>
-        <p>{texte}</p>
+        <div> {texte}</div>
       </div>
     </section>
   );
