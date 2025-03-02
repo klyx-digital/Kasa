@@ -1,6 +1,7 @@
 @use "./Variables";
 
 .card {
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: Variables.$justify-content;
