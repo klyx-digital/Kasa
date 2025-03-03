@@ -1,6 +1,7 @@
 @use "./Variables";
 
 .pageErreur {
+  margin-bottom: 50px;
   text-align: Variables.$text-align;
   .titresErreur {
     font-size: 288px;
@@ -9,6 +10,6 @@
 
   .errorMessage {
     color: Variables.$color-red;
-    margin: 70px;
+    margin: 40px;
   }
 }
